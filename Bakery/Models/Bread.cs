@@ -1,2 +1,4 @@
-namespace Bakery
+namespace Bakery.Models
 {
+
+}
