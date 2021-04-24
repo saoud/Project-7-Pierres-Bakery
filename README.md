@@ -1,162 +1,45 @@
+# _Pierre's Bakery_
 
-These setup instructions follow **Week 1**, Test-Driven Development with C# from Epicodus's [C# and .Net curriculum](https://www.learnhowtoprogram.com/c-and-net)
+#### _This program is a mock bakery. Come get some bread and pastries!_
 
-Setting up project from scratch
+#### By _**Saoud Rana**_
 
-[MSTest Configuration and Setup](https://www.learnhowtoprogram.com/c-and-net/test-driven-development-with-c/mstest-configuration-and-setup)
+## Technologies Used
 
-After running `dotnet restore` and generating `obj` directories. In root directory:
-    `touch .gitignore` and add to file `*/obj/`
+* _C#_
+* _.NET_
+* _MSBuild_
+* _MSTest_
 
-[MSTest Writing and Running Tests](https://www.learnhowtoprogram.com/c-and-net/test-driven-development-with-c/mstest-writing-and-running-tests)
+## Description
 
-After setup, navigate to TDDcsharp.Tests and run `dotnet test`
-Tests will pass, even without testing code, because it didn't receive any compiler errors.
+_This project was created to practice using C#. The user responds to several prompts to buy bread and pastries, and the program returns the total cost to the user._
 
-add `*/bin/` to .gitignore. Generated after running dotnet test
+## Setup/Installation Requirements
 
-[Our First Tests with MSTest](https://www.learnhowtoprogram.com/c-and-net/test-driven-development-with-c/our-first-tests-with-mstest)
+* _Clone repository from GitHub to desired location using: $ git clone https://github.com/saoud/Project-7-Pierres-Bakery.git
+* _Navigate to and open project directory in terminal_
+  > cd Bakery.Solution
+* _Once in project directory, open project in code editor_
+  >code .
+* _To build project, in the terminal enter:_
+  >dotnet restore
+* _To run the program, navigate to production folder Bakery and in the terminal enter:_
+  >dotnet run
+* _Respond to the prompts in the command line._
+* _To run tests: Navigate from the root directory to the Bakery.Tests directory. Then in terminal, type_
+  >dotnet restore
+* _Finally, to run the tests, make sure you are still in the Bakery.tests directory and in the terminal type_
+  >dotnet test
 
-Following "Red, Green, Refactor" Workflow, test for isCar was added in this order:
-
-1. Identify the simplest possible behavior the program must exhibit"
-
-```csharp
-my notes: "If string equals "car" return boolean true"
-```
-
-2. Write a coded test
-
-ModelTests/CarDealership.cs
-Note: Typo from previous commit. Change "public class CarDealership" to "public class CarDealershipTest
-```csharp
-    [TestClass]
-    public class CarDealershipTests
-    {
-        [TestMethod]
-        public void isCar_StringEqualCar_True()
-        {
-            CarDealership testCarDealership = new CarDealership();
-            Assert.AreEqual(true, testCarDealership.isCar("car"));
-        }
-    }
-```
-
-
-TDDcsharp/Models/CarDealership.cs 
-(Nothing has changed. No code added yet)
-```csharp
-    public class CarDealership
-    {
-        public bool isCar(string car)
-        {
-            return false;
-        }
-    }
-```
-
-3. Confirm Test Fails
-
-Navigate to TDDcsharp.Tests and run `dotnet test`
-test should fail - this is a good fail - Expected:<True>. Actual:<False>
-a compiler error is not a fail.
-
-4. Implement the behavior with the least amount of code possible
-
-TDDcsharp/Models/TDD.cs 
-```csharp
-    public class CarDealership
-    {
-        public bool isCar(string car)
-        {
-            return car == "car";
-        }
-    }
-```
-
-5. Confirm the test passes
-
-Navigate to TDDchsarp.Tests and run `dotnet test`
-
-6. Confirm previous tests still pass
-    N/A no previous tests at the moment so moving on.
-
-7. Check for refactoring
-    Looks as DRY as it can be at the moment. Moving on.
-
-8. Repeat
-    There is probably more that we could use to define a car. Such as, "4 wheels", "steering wheel", "brakes"
-
-1. Identify the simplest possible behavior the program must exhibit"
+## Tests
 
 ```csharp
-my notes: 
-"If string equals "car" return boolean true"
-"Other things makeup a car. If strings equals any of "car", "4 wheels", "steering wheel", "brakes" return boolean true
+my notes: "Does Bread Return a Number"
 ```
-2. Write a coded test
+## Known Bugs
 
-ModelTests/CarDealership.cs
-```csharp
-    [TestClass]
-    public class CarDealershipTests
-    {
-        [TestMethod]
-        public void isCar_StringEqualCar_True()
-        {
-            CarDealership testCarDealership = new CarDealership();
-            Assert.AreEqual(true, testCarDealership.isCar("car"));
-        }
-
-        [TestMethod]
-        public void isCar_StringNotEqualCarThings_False()
-        {
-            CarDealership testCarDealership = new CarDealership();
-            Assert.AreEqual(false, testCarDealership.isCar("horse"));
-        }
-    }
-```
-
-3. Confirm test fails
-    yes it does "car does not equal "horse"
-
-4. Implement the behavior with the least amount of code possible
-
-```csharp
-    public class CarDealership
-    {
-        public bool isCar(string car)
-        {
-            string[] whatIsCarArray = {"car", "4 wheels", "brakes", "steering wheel"};
-            
-            foreach (string carThing in whatIsCarArray)
-            {
-                if(car == carThing)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-    }
-```
-
-5. Confirm the test passes
-
-Navigate to TDDchsarp.Tests and run `dotnet test`
-
-6. Confirm previous tests still pass
-    `isCar_StringEqualCar_True()`
-    changed name to `isChar_StringEqualCarThing_True()`
-    test too with other things that should be true like "4 wheels"
-    run test again
-    confirm passes
-
-7. Check for refactoring
-    Looks Dry but perhaps a way to loop over the first test so I don't have to add each thing at a time to test or repeat myself with lots of tests. Will leave as is for now since the array of things that define a car is fixed and confident if one string works then the rest will work
-
-8. Repeat
-    What else can go in my car dealership?
+* _No known bugs_
 
     ## License
 * [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/saoud/csharp-TDD-template/blob/main/LICENSE)
