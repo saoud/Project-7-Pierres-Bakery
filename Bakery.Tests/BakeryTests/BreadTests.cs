@@ -1,9 +1,15 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TDDcsharp;
+using Bakery.Models;
 
-namespace TDDcsharp.Tests
-{
+namespace Bakery.Tests
     [TestClass]
-    public class {
-        
-    }
+    public class BreadTests
+    {
+        [TestMethod] // What is bread amount
+        public void BreadNumber_DoesBreadReturnNumber_BreadHasNumber()
+        {
+        Bread breadTest = new Bread(5);
+        Assert.AreEqual(5, breadTest.AmountOfBread);
+        }
+        }
+}
