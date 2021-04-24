@@ -5,7 +5,7 @@ namespace Bread.Tests {
     [TestClass]
     public class BreadTests
     {
-        [TestMethod] // What is bread amount
+        [TestMethod]
         public void BreadNumber_DoesBreadReturnNumber_BreadHasNumber()
         {
         Bread breadTest = new Bread(5);
