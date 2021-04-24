@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Bakery.Models;
 
-namespace Bakery.Tests
+namespace Bread.Tests {
     [TestClass]
     public class BreadTests
     {
@@ -11,5 +11,5 @@ namespace Bakery.Tests
         Bread breadTest = new Bread(5);
         Assert.AreEqual(5, breadTest.AmountOfBread);
         }
-        }
+    }
 }
