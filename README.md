@@ -19,7 +19,7 @@ _This project was created to practice using C#. The user responds to several pro
 
 * _Clone repository from GitHub to desired location using: $ git clone https://github.com/saoud/Project-7-Pierres-Bakery.git
 * _Navigate to and open project directory in terminal_
-  > cd Bakery.Solution
+  > cd Project-7-pierres-bakery
 * _Once in project directory, open project in code editor_
   >code .
 * _To build project, in the terminal enter:_
