@@ -8,8 +8,14 @@ namespace Bread.Tests {
         [TestMethod]
         public void BreadNumber_DoesBreadReturnNumber_BreadHasNumber()
         {
-        Bread breadTest = new Bread(5);
-        Assert.AreEqual(5, breadTest.AmountOfBread);
+        Bread breadTest = new Bread(6);
+        Assert.AreEqual(6, breadTest.AmountOfBread);
+        }
+        [TestMethod] 
+        public void BreadPrice_WhatIsPriceOfBread_BreadHasPrice()
+        {
+        Bread breadTest = new Bread(6);
+        Assert.AreEqual(20, breadTest.Price());
         }
     }
 }
