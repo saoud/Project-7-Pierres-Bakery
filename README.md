@@ -19,18 +19,18 @@ _This project was created to practice using C#. The user responds to several pro
 
 * _Clone repository from GitHub to desired location using: $ git clone https://github.com/saoud/Project-7-Pierres-Bakery.git
 * _Navigate to and open project directory in terminal_
-  > cd Bakery.Solution
+```cd Bakery.Solution```
 * _Once in project directory, open project in code editor_
-  >code .
+```code .```
 * _To build project, in the terminal enter:_
-  >dotnet restore
+```dotnet restore```
 * _To run the program, navigate to production folder Bakery and in the terminal enter:_
-  >dotnet run
+```>dotnet run```
 * _Respond to the prompts in the command line._
 * _To run tests: Navigate from the root directory to the Bakery.Tests directory. Then in terminal, type_
-  >dotnet restore
+```dotnet restore```
 * _Finally, to run the tests, make sure you are still in the Bakery.tests directory and in the terminal type_
-  >dotnet test
+```dotnet test```
 
 ## Tests
 
