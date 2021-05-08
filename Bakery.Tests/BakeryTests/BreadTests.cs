@@ -9,14 +9,14 @@ namespace Bakery.Tests
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread(1);
+      Bread newBread = new Bread(0);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
       [TestMethod]
     public void GetCost_ReturnsCost_int()
     {
       Bread newBread = new Bread(0);
-      Assert.AreEqual(1, newBread.Cost);
+      Assert.AreEqual(0, newBread.Cost);
     }
 
   }
