@@ -36,7 +36,7 @@ namespace Bakery.Tests
     {
       Pastry newPastry = new Pastry(2);
       newPastry.CalculatePastryCost();
-      Assert.AreEqual(5, newPastry.Cost);
+      Assert.AreEqual(4, newPastry.Cost);
     }
 
   }
