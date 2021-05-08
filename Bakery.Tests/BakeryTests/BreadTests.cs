@@ -29,7 +29,7 @@ namespace Bakery.Tests
     {
       Bread newBread = new Bread(3);
       newBread.CalculateBreadCost();
-      Assert.AreEqual(12, newBread.Cost);
+      Assert.AreEqual(10, newBread.Cost);
     }
 
   }
