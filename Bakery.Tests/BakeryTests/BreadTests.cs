@@ -50,7 +50,7 @@ namespace Bakery.Tests
     {
       Bread newBread = new Bread(0);
       newBread.CalculateBreadCost();
-      Assert.AreEqual(1, newBread.Cost);
+      Assert.AreEqual(0, newBread.Cost);
     }
   }
 }
