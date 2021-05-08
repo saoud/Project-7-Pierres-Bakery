@@ -25,6 +25,13 @@ namespace Bakery
         Console.WriteLine("That is not a valid input. Please enter the number of pastries you would like. Enter 0 if you do not want any pastries.");
         pastryOrderSuccess = int.TryParse(Console.ReadLine(), out pastryOrder);
       }
+      Bread newBread = new Bread(breadOrder);
+      Pastry newPastry = new Pastry(pastryOrder);
+      newBread.CalculateBreadCost();
+      int breadCost = newBread.Cost;
+      newPastry.CalculatePastryCost();
+      int pastryCost = newPastry.Cost;
+      Console.WriteLine("Thank you for your order! Your total is: $" + (breadCost + pastryCost));
     }
   }
 }
