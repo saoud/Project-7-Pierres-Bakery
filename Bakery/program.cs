@@ -18,6 +18,13 @@ namespace Bakery
         Console.WriteLine("That is not a valid input. Please enter the number of bread loaves you would like. Enter 0 if you do not want any bread loaves.");
         breadOrderSuccess = int.TryParse(Console.ReadLine(), out breadOrder);
       }
+      Console.WriteLine("How many pastries would you like to order?");
+      bool pastryOrderSuccess = int.TryParse(Console.ReadLine(), out int pastryOrder);
+      while(!pastryOrderSuccess || (pastryOrder < 0))
+      {
+        Console.WriteLine("That is not a valid input. Please enter the number of pastries you would like. Enter 0 if you do not want any pastries.");
+        pastryOrderSuccess = int.TryParse(Console.ReadLine(), out pastryOrder);
+      }
     }
   }
 }
