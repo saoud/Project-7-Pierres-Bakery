@@ -2,22 +2,24 @@ namespace Bakery.Models
 {
   public class Bread
   {
-    public int AmountOfBread { get; set; }
-    public Bread(int amountOfBread)
+    private int _cost = 0;
+    public int Cost 
     {
-      AmountOfBread = amountOfBread;
+      get
+      {
+        return _cost;
+      }
     }
-    public int BreadPrice()
+     public int OrderAmount { get; } 
+
+    public Bread(int amount)
     {
-      if (AmountOfBread % 3 == 0)
-      {
-        int orderTotal = (AmountOfBread - (AmountOfBread / 3)) * 5;
-        return orderTotal;
-      }
-      else
-      {
-        return AmountOfBread * 5;
-      }
+      OrderAmount = amount;
+    }
+    public void CalculateBreadCost()
+    {
+      _cost += ((OrderAmount/3)* 10);
+      _cost += ((OrderAmount % 3) * 5);
     }
   }
 }
