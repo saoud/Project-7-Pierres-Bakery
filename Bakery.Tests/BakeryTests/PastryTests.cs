@@ -38,6 +38,12 @@ namespace Bakery.Tests
       newPastry.CalculatePastryCost();
       Assert.AreEqual(4, newPastry.Cost);
     }
-
+    [TestMethod]
+    public void CalculatePastryCost_CalculatesCostOfPastryOrderInput4_void()
+    {
+      Pastry newPastry = new Pastry(4);
+      newPastry.CalculatePastryCost();
+      Assert.AreEqual(8, newPastry.Cost);
+    }
   }
 }
