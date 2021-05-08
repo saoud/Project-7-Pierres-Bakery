@@ -18,6 +18,11 @@ namespace Bakery.Tests
       Bread newBread = new Bread(0);
       Assert.AreEqual(0, newBread.Cost);
     }
-
+    [TestMethod]
+    public void GetOrderAmount_ReturnsOrderAmount_int()
+    {
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(2, newBread.OrderAmount);
+    }
   }
 }
