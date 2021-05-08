@@ -32,11 +32,16 @@ _This project was created to practice using C#. The user responds to several pro
 * _Finally, to run the tests, make sure you are still in the Bakery.tests directory and in the terminal type_
 ```dotnet test```
 
-## Tests
+## Specifications
 
-```csharp
-my notes: "Does Bread Return a Number"
-```
+| Behavior                                                                                     | Input                 | Output                                                                                                      |
+|----------------------------------------------------------------------------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------|
+| The program will provide the user with a welcome message and the cost for bread and pastries |                       | "Welcome valued customer! Bread is buy 2, get one free or $5 per loaf. Pastries are one for $2 or 3 for $5" |
+| The user will be able to specify how many loaves of bread they would like                    |           3           | "3 loaves of bread"                                                                                         |
+| The program will return the cost of the user's bread order                                   | "3 loaves of bread"   | $10                                                                                                         |
+| The user is able to specify how many pastries they'd like                                    |           3           | "3 pastries"                                                                                                |
+| The program will return the cost of the user's pastry order                                  | "3 pastries"          | $5                                                                                                          |
+| The program will return the total cost of the user's bread and pastry order                  | "3 bread, 3 pastries" | "Your total cost is $15"                                                                                    |
 ## Known Bugs
 
 * _No known bugs_
