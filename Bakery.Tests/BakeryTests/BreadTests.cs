@@ -22,7 +22,7 @@ namespace Bakery.Tests
     public void GetOrderAmount_ReturnsOrderAmount_int()
     {
       Bread newBread = new Bread(1);
-      Assert.AreEqual(2, newBread.OrderAmount);
+      Assert.AreEqual(1, newBread.OrderAmount);
     }
   }
 }
