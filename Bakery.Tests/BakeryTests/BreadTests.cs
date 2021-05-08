@@ -1,18 +1,23 @@
-using Bakery.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using Bakery.Models;
 
-namespace Bread.Tests {
-    [TestClass]
-    public class BreadTests
+namespace Bakery.Tests
+{
+  [TestClass]
+  public class BreadTests
+  {
+    [TestMethod]
+    public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-        [TestMethod]
-    public void BreadPrice_GetPriceOfBread_Int()
+      Bread newBread = new Bread(1);
+      Assert.AreEqual(typeof(Bread), newBread.GetType());
+    }
+      [TestMethod]
+    public void GetCost_ReturnsCost_int()
     {
-      int breadOrder = 1;
-      Bread newBreadOrder = new Bread(breadOrder);
-      int result = newBreadOrder.BreadPrice();
-      Assert.AreEqual(5, result);
+      Bread newBread = new Bread(0);
+      Assert.AreEqual(1, newBread.Cost);
     }
-    }
+
+  }
 }
